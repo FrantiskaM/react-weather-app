@@ -7,7 +7,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
-      temperature: response.data.main.temperature,
+      temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: "Wednesday 07:00",
       description: response.data.weather[0].description,
@@ -66,8 +66,8 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    const apiKey = "210d99196a88b9257ed8cb3535a0a0c5";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${props.defaultCity}&key=${apiKey}&units=metric`;
+    const apiKey = "53f3bc1f5d348c44be3e3754c7185573";
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
     return "Loading...";
