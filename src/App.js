@@ -15,7 +15,8 @@ export default function App() {
             rel="noreferrer"
           >
             GitHub.
-          </a>
+          </a>{" "}
+          and is open-sourced.
         </footer>
       </div>
     </div>
